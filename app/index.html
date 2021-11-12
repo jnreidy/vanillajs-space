@@ -5,24 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles/home.css">
+  <title>Design system</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Space tourism website</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <!-- <script src="scripts/crew.js"></script>
-  <script src="scripts/destination.js"></script>
-  <script src="scripts/tech.js"></script> -->
-</head>
-<body>
-  <div id="nav-menu">
-    <ul>
-      <li><a href="#" onclick="onNav('/destination')">Destination</a></li>
-      <li><a href="#" onclick="onNav('/crew')">Crew</a></li>
-      <li><a href="#" onclick="onNav('/tech')">Technology</a></li>
-    </ul>
+  <script src="./index.js" defer></script>
+ </head>
+<body class="home">
+
+  <header class="primary-header flex">
+    <div>
+      <img src="assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" data-visible="false" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+          <li class="active"><a class="ff-sans-cond txt-white uppercase letter-spacing-2"href="index.html"><span>00</span>Home</a>
+          <li><a class="ff-sans-cond txt-white uppercase letter-spacing-2"href="pages/destination/destination-moon.html"><span>01</span>Destination</a>
+          <li><a class="ff-sans-cond txt-white uppercase letter-spacing-2"href="pages/crew/crew-commander.html"><span>02</span>Crew</a>
+          <li><a class="ff-sans-cond txt-white uppercase letter-spacing-2"href="pages/technology/technology-vehicle.html"><span>03</span>Technology</a>  
+      </ul>
+    </nav>
+    
+  </header>
+
+  <div class="grid-container grid-container--home">
+    <div>
+      <h1 class="txt-light fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
+        <span class="fs-900 ff-serif txt-white block">Space</span>
+      </h1>
+      <p>
+      Let’s face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience! 
+      </p>
+    </div>
+    <div>
+      <a href="#" class="large-button uppercase ff-serif txt-dark bg-white">Explore</a>
+    </div>
   </div>
-  <div id="root">
-    <h1>Test</h1>
-  </div>
-  <script src="./scripts/app.js"></script>
+
 </body>
 </html>
