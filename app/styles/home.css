@@ -382,7 +382,7 @@ select {
     }
 }
 
-@media (min-width: 35em) and (max-width: 55em) {
+@media (min-width: 35em) and (max-width: 54.999em) {
     .primary-header {
         margin-top: 0;
     }
@@ -395,6 +395,29 @@ select {
         display: none;
     }
 }
+
+@media (min-width: 55em) {
+    
+    .primary-header::after {
+        content: '';
+         display: block;
+         position: relative;
+         height: 1px;
+         width: 100%;
+         margin-right: -3rem;
+         background: hsl( var(--clr-white) / 0.25);
+         order: 1;
+    }
+
+    nav {
+        order: 2;
+    }
+
+    .primary-navigation {
+        margin-block: 2rem;
+    }
+}
+
 
 .underline-indicators > * {
     cursor: pointer;
